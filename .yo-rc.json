@@ -1,0 +1,38 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "br.com.grupomult.demolog"
+    },
+    "jhipsterVersion": "6.9.1",
+    "applicationType": "microservice",
+    "baseName": "demolog",
+    "packageName": "br.com.grupomult.demolog",
+    "packageFolder": "br/com/grupomult/demolog",
+    "serverPort": "8081",
+    "authenticationType": "jwt",
+    "cacheProvider": "no",
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Memory",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "ZGQ2Njg5NzM2ZGJmZTZiZTAxYTUyNWNkNTg3ZTg5NjQ3NTcyY2VlZWJkOGYzZGFiYmQzOTcyZmQ0NWJjZjMwZTJiNjFjZTU2NDMwM2ViOGU0MGFjNGI2OGIwMWFmNWM0NGNmMmExNjU0ZjJmNDFjYzdiYTJmNjQ3ZWI3NDRmNzc=",
+    "embeddableLaunchScript": false,
+    "creationTimestamp": 1591384942875,
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "clientPackageManager": "npm",
+    "blueprints": [],
+    "skipClient": true,
+    "skipUserManagement": true,
+    "lastLiquibaseTimestamp": 1591385077000
+  }
+}
