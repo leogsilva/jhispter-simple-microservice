@@ -87,7 +87,7 @@ To achieve this, first build a docker image of your app by running:
 
 Then run:
 
-    docker-compose -f src/main/docker/app.yml up -d
+    docker-compose -f src/main/docker/app.yml up -d    
 
 For more information refer to [Using Docker and Docker-Compose][], this page also contains information on the docker-compose sub-generator (`jhipster docker-compose`), which is able to generate docker configurations for one or several JHipster applications.
 
@@ -104,3 +104,15 @@ To configure CI for your project, run the ci-cd sub-generator (`jhipster ci-cd`)
 [running tests page]: https://www.jhipster.tech/documentation-archive/v6.9.1/running-tests/
 [code quality page]: https://www.jhipster.tech/documentation-archive/v6.9.1/code-quality/
 [setting up continuous integration]: https://www.jhipster.tech/documentation-archive/v6.9.1/setting-up-ci/
+
+## Testing
+
+To test locally
+```
+curl -v -X GET "http://localhost:8081/api/cars" -H "accept: */*"
+```
+
+To test inside kubernetes
+```
+curl -v -X GET "http://demoms/api/cars" -H "accept: */*"
+```

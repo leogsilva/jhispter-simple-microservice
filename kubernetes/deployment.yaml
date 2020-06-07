@@ -1,0 +1,56 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: demoms
+  name: demoms
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demoms
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: demoms
+    spec:       
+      containers:
+      - name: demo-microservice
+        image: leogsilva/demo-microservice:v2
+        volumeMounts:
+        - mountPath: /tmp/logs
+          name: logs
+        ports:
+        - containerPort: 8081
+          protocol: TCP 
+        env:
+        - name: _JAVA_OPTIONS
+          value: "-Xmx512m -Xms256m"
+        - name: SPRING_PROFILES_ACTIVE
+          value: "dev,swagger"
+        - name: JHIPSTER_SLEEP
+          value: "30"
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 8081
+          initialDelaySeconds: 60
+          periodSeconds: 3  
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 8081
+          initialDelaySeconds: 60
+          periodSeconds: 3         
+        resources: {}
+      volumes:
+      - name: logs
+        hostPath:
+          # directory location on host
+          path: /tmp/logs
+          # this field is optional
+          type: Directory                 
+status: {}
